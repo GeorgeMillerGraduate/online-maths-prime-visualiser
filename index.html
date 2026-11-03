@@ -1,0 +1,88 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prime Explorer — Jenga-Code</title><meta name="description" content="Explore prime numbers, Ulam spirals, distributions and prime gaps."><link rel="canonical" href="https://jenga-code.com/apps/prime-visualiser/"><link rel="stylesheet" href="css/style.css?v=prime-publication-2"></head><body><a class="skip-link" href="#main">Skip to explorer</a><header class="site-header"><a class="brand" href="/" aria-label="Jenga-Code homepage"><svg class="compass-mark" aria-hidden="true" viewbox="0 0 64 64" width="54" height="54"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-width="1"></circle><path d="M32 2 38 26 62 32 38 38 32 62 26 38 2 32 26 26Z" fill="none" stroke="currentColor"></path><path d="M32 7 32 32 26 26ZM57 32 32 32 38 26ZM32 57 32 32 38 38ZM7 32 32 32 26 38Z" fill="currentColor"></path><circle cx="32" cy="32" r="3" fill="currentColor"></circle></svg><span>Jenga-Code<small>ALGORITHMS · GAMES · MATHEMATICAL IDEAS</small></span></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/apps/" aria-current="page">Applications</a><a href="/blog/">Journal</a><a href="/qualifications/">Qualifications</a></nav></header><main id="main" class="publication"><aside class="editorial"><img src="images/prime-study.webp" width="800" height="1200" alt="Brass magnifying glass over a prime-number study, with counting counters and mathematics books"><h2>Patterns in the primes.</h2><i class="short-rule"></i><p>Explore prime numbers and the gaps between them.</p></aside><section class="studio-column" aria-label="Prime Explorer"><header class="page-heading"><h1>Prime Explorer</h1><p>Reveal patterns in the prime numbers.</p></header><div class="modes">
+<button class="mode-button active" data-mode="ulam" type="button">
+            Ulam spiral
+          </button>
+<button class="mode-button" data-mode="distribution" type="button">
+            Distribution
+          </button>
+<button class="mode-button" data-mode="gaps" type="button">
+            Prime gaps
+          </button>
+</div>
+<div class="metrics"><span>
+<small>
+          LIMIT
+        </small>
+<b id="limitStat">
+          10,000
+        </b>
+</span>
+<span>
+<small>
+          PRIMES
+        </small>
+<b id="primeCount">
+          0
+        </b>
+</span>
+<span>
+<small>
+          DENSITY
+        </small>
+<b id="densityStat">
+          —
+        </b>
+</span>
+</div><div class="plot-heading"><h2 id="visualisationTitle">Ulam spiral</h2><span id="viewStatus" role="status">Ready to explore</span></div><div class="canvas-shell"><div class="prime-stage"><canvas id="primeCanvas" aria-label="Prime number visualisation"></canvas><div id="canvasMessage" class="canvas-message">Generate a visualisation to begin.</div></div></div><div class="zoom-toolbar" id="zoomToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><output id="zoomValue">Zoom 1×</output><button id="zoomIn" aria-label="Zoom in">+</button><button id="fitView">Fit view</button><span class="legend"><i></i> Prime <i class="twin-key"></i> Twin prime</span></div><p id="modeDescription" class="mode-description">Integers spiral outwards from 1. Coloured dots mark primes; diagonal patterns emerge as the range grows.</p><div class="utility-actions"><button id="clearButton">Clear</button><button id="downloadButton">Save PNG ↓</button></div></section><aside class="prime-controls"><h2>Explore the primes</h2><label class="range-control">
+<span class="control-heading">
+<span>
+            Maximum integer
+          </span>
+<b id="numberLimitValue">
+            10,000
+          </b>
+</span>
+<input id="numberLimit" max="10000000" min="100" step="100" type="range" value="10000">
+</label>
+<label class="range-control">
+<span class="control-heading">
+<span>
+            Cell size
+          </span>
+<b id="cellSizeValue">
+            4 px
+          </b>
+</span>
+<input id="cellSize" max="12" min="1" type="range" value="4">
+</label>
+<label class="check">
+<input id="highlightTwins" type="checkbox">
+<span>
+          Highlight twin primes
+        </span>
+</label>
+<button class="primary generate" id="generateButton">Generate</button><section class="animation-controls"><h2>Zoom animation</h2><button id="playZoom" class="blue">▶ Play zoom-out</button><label class="range-control"><span class="control-heading"><span>Speed</span><b id="speedValue">Normal</b></span><input id="zoomSpeed" type="range" min="1" max="5" value="3"><span class="range-limits"><span>Slow</span><span>Fast</span></span></label><label class="check"><input id="loopZoom" type="checkbox"> Loop</label><div class="animation-actions"><button id="pauseZoom" disabled>Ⅱ Pause</button><button id="resetView">Reset view</button></div><p class="animation-note">Keeps revealing more primes as it zooms out, up to 10 million integers.</p></section><div class="secondary-metrics"><span>
+<small>
+          TWIN PAIRS
+        </small>
+<b id="twinStat">
+          —
+        </b>
+</span>
+<span>
+<small>
+          LARGEST PRIME
+        </small>
+<b id="largestPrime">
+          —
+        </b>
+</span>
+<span>
+<small>
+          MAX GAP
+        </small>
+<b id="gapStat">
+          —
+        </b>
+</span>
+</div></aside></main><footer class="site-footer"><span>Jenga-Code · Number theory</span><nav aria-label="Footer navigation"><a href="/apps/">All applications</a><a href="/privacy/">Privacy</a></nav></footer><script src="js/jquery.min.js"></script><script src="js/PrimeSieve.js"></script><script src="js/UlamSpiral.js?v=prime-2"></script><script src="js/PrimeGapRenderer.js?v=prime-2"></script><script src="js/app.js?v=prime-2"></script></body></html>

@@ -1,0 +1,7 @@
+Prime Explorer — publication edition
+
+Extract this ZIP directly into public_html/apps/prime-visualiser/ and overwrite existing files. index.html, css/, js/ and images/ must sit directly in that folder. Refresh with Ctrl+F5. No build step required.
+
+Includes Ulam spiral, distribution and prime gaps, twin-prime highlights, Clear and PNG export. Zoom animation progressively expands the generated range up to 10,000,000 integers, preserving the centre as each larger field loads. Manual zoom-out also extends the range at the fitted view. The animation is opt-in and applies to the Ulam spiral; Play resumes a paused zoom, Speed changes its duration, Loop repeats the sequence and Reset view restores the fitted view. Switching modes or hiding the tab pauses the animation.
+
+PrimeSieve.js retained unchanged. The Ulam presentation was rebuilt with cached rendering. Graph colours and high-DPI sizing were updated.
